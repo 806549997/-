@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #fa{
+            width: 200px;
+            height: 200px;
+            background-color: brown;
+        }
+        #son{
+            width: 100px;
+            height: 100px;
+            background-color: antiquewhite;
+        }
+    </style>
+</head>
+<body>
+<div id="fa" onmousedown="getEventTrigger(event)">
+    <p id="son" onmousedown="getEventTrigger(event)">点我试试</p>
+</div>
+<script type="text/javascript">
+    const fa = document.getElementById('fa');
+    const son = document.getElementById('son');
+    function getEventTrigger(event) {
+        let x = event.currentTarget;
+        let y = event.target;
+        alert("currentTarget 指向： " + x.id + "， target指向：" + y.id);
+    }
+</script>
+</body>
+</html>
